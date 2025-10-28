@@ -1,0 +1,7 @@
+{
+  "target_cov": 0.9,
+  "pos_coverage": 0.903695,
+  "mean_set_size": 8.226185,
+  "hamming_acc_cp": 0.454859,
+  "alpha": 0.1
+}

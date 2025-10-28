@@ -1,0 +1,9 @@
+{
+  "dataset": "chestmnist",
+  "img_size": 28,
+  "training_procedure": "endToEnd",
+  "architecture": "densenet121",
+  "seed": 9930641,
+  "ACC": 0.9477810113926549,
+  "AUC": 0.7656752974112466
+}

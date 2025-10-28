@@ -1,0 +1,15 @@
+class,pos_count,covered_pos_count,coverage
+atelectasis,2420,18,0.00743801652892562
+cardiomegaly,582,76,0.13058419243986255
+effusion,2754,312,0.11328976034858387
+infiltration,3938,0,0.0
+mass,1133,0,0.0
+nodule,1335,0,0.0
+pneumonia,242,0,0.0
+pneumothorax,1089,8,0.0073461891643709825
+consolidation,957,0,0.0
+edema,413,0,0.0
+emphysema,509,0,0.0
+fibrosis,362,0,0.0
+pleural,734,0,0.0
+hernia,42,0,0.0
