@@ -1,0 +1,33 @@
+# xAILab
+# Chair of Explainable Machine Learning
+# Otto-Friedrich University of Bamberg
+#
+# Parameter configurations for training and evaluation.
+
+# Fixed Parameters
+data_path: 'C:/datasets_study'  # Where the dataset is stored
+output_path: './result_densenet121_cp'  # Where the trained model shall be stored.
+epochs: 100  # How many epochs to train for.
+learning_rate: 0.0001  # Learning rate
+batch_size: 16  # Batch size for the training.
+batch_size_eval: 256  # Batch size for the evaluation.
+device: 'cuda:0'  # Which device to run the computations on.
+
+cp_alpha: 0.10      # 目标覆盖 1-α
+cluster_K: 7    # 手动 M（ChestMNIST 建议先试 2 或 3）
+# Split parameters
+val_split:
+  val_tune_ratio: 0.20  #val → val_tune + cal；cal → D1 + D2
+  d1_ratio: 0.50  #D1是聚类
+  out_dir: './splits_D1_50'
+  split_file: ./splits_D1_50/chestmnist_val_splits_seed9930641.json
+  use_splits: True
+
+#task: "multi-label, binary-class"#多标签在medminest里面info定义
+# Modifiable Parameters
+dataset: 'chestmnist'  # Which dataset to use. ('bloodmnist', 'breastmnist', 'chestmnist', 'dermamnist', 'octmnist', 'organamnist', 'organcmnist', 'organsmnist', 'pathmnist', 'pneumoniamnist', 'retinamnist', 'tissuemnist')
+img_size: 28  # Height and width of the input image. (28, 64, 128, 224)
+training_procedure: 'endToEnd'  # Which training procedure to use. ('endToEnd', 'linearProbing', 'kNN')
+architecture: 'densenet121'  # Which model to use. ('vgg16', 'alexnet', 'resnet18', 'densenet121', 'efficientnet_b4', 'vit_base_patch16_224', 'vit_base_patch16_clip_224', 'eva02_base_patch16_clip_224', 'vit_base_patch16_224.dino', 'samvit_base_patch16')
+k: 11  # Number of neighbors for the kNN.
+seed: 9930641  # Seed for random operations for reproducibility. (9930641, 115149041, 252139603)
